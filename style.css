@@ -35,6 +35,7 @@ header{
     margin: 0.5rem;
     border: none;
     cursor: pointer;
+    margin-bottom: 0.1rem;
 }
 
 .supplement-btns button:hover{
@@ -53,3 +54,9 @@ form input, form button.add-button{
     border:none
 }
 
+ul li{
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
