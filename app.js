@@ -6,6 +6,7 @@ let addedSupplementsList = document.getElementById("supplements-added-list");
 let supplementButtonElements = document.querySelectorAll('.supplement-button');
 let lastClickedSupplement;
 let supplementArray = [];
+let supplementUnit; 
 //let deleteButtonElement;
 
 // EVENT LISTENERS
@@ -50,16 +51,18 @@ function addNewSupplementIntake(event) {
             supplementQuantityElement.textContent = quantityInputElement.value;
             deleteButtonElement.textContent='DEL'
             deleteButtonElement.setAttribute("class", "delete-btn");
-            
+            supplementUnit = document.getElementById('unit').value
 
             supplementQuantityElement.setAttribute("id", lastClickedSupplement);
             supplementNameElement.appendChild(supplementQuantityElement);
+            supplementNameElement.append(supplementUnit);
             supplementNameElement.appendChild(deleteButtonElement);
-
+            
             addedSupplementsList.appendChild(supplementNameElement);
 
             supplementArray.push(newSuppObject);
 
+            supplementUnit = null;
             lastClickedSupplement = null;
             quantityInputElement.value = null;
 
