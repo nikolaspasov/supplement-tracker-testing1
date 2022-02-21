@@ -25,6 +25,8 @@ supplementButtonElements.forEach(supplementButton => {
 // FUNCTIONS
 function addNewSupplementIntake(event) {
     event.preventDefault();
+    
+    supplementUnit = document.getElementById('unit').value
 
     if (lastClickedSupplement == null || quantityInputElement.value == "" ||
         quantityInputElement.value <= 0) {
@@ -51,7 +53,6 @@ function addNewSupplementIntake(event) {
             supplementQuantityElement.textContent = quantityInputElement.value;
             deleteButtonElement.textContent='DEL'
             deleteButtonElement.setAttribute("class", "delete-btn");
-            supplementUnit = document.getElementById('unit').value
 
             supplementQuantityElement.setAttribute("id", lastClickedSupplement);
             supplementNameElement.appendChild(supplementQuantityElement);
